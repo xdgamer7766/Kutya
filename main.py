@@ -26,7 +26,6 @@ index = 0
 a = 0
 for sor in kutyak:
     if int(sor[3]) > int(kutyak[index][3]):
-        print(kutyak[index])
         index = a
     a += 1
 fajt_id = 0
@@ -43,5 +42,19 @@ for sor in kutyanevek:
     a += 1
 
 print(f"7. Feladat: {kutyanevek[nev_id][1]} , {kutyafajtak[fajt_id][1]}")
+
+
+print("8. Feladat: Január 10.-én vizsgált kutya fajták:")
+index = 0 
+for egy in kutyak: 
+    if egy[4] == "2018.01.10":
+        faj_id = 0
+        a = 0
+        for ketto in kutyafajtak:
+            if kutyak[index][1] == ketto[0]:
+                faj_id = a
+            a += 1
+        print(f"\t{kutyafajtak[faj_id][1]}: 1 kutya")
+    index += 1
 
 
