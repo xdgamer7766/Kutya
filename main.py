@@ -25,7 +25,8 @@ print(f"6. Feladat: {osszkor / len(kutyak)}")
 index = 0
 a = 0
 for sor in kutyak:
-    if sor[3] > kutyak[index][3]:
+    if int(sor[3]) > int(kutyak[index][3]):
+        print(kutyak[index])
         index = a
     a += 1
 fajt_id = 0
@@ -37,8 +38,10 @@ for sor in kutyafajtak:
 nev_id = 0
 a = 0
 for sor in kutyanevek:
-    if kutyak[index][1] == sor[0]:
+    if kutyak[index][2] == sor[0]:
         nev_id = a
     a += 1
 
 print(f"7. Feladat: {kutyanevek[nev_id][1]} , {kutyafajtak[fajt_id][1]}")
+
+
